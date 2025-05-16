@@ -1,0 +1,132 @@
+------------------------------------------------
+|                  User                        |
+------------------------------------------------
+| - userId: String                             |
+| - name: String                               |
+| - email: String                              |
+| - password: String                           |
+| - phone: String                              |
+| - role: Enum (Tenant/Landlord/Admin)        |
+------------------------------------------------
+| + register()                                 |
+| + login()                                    |
+| + updateProfile()                            |
+------------------------------------------------
+
+------------------------------------------------
+|                  Property                    |
+------------------------------------------------
+| - propertyId: String                         |
+| - ownerId: String (FK -> User)               |
+| - title: String                              |
+| - description: String                        |
+| - location: String                           |
+| - price: Number                              |
+| - images: [String]                           |
+| - available: Boolean                         |
+------------------------------------------------
+| + createListing()                            |
+| + editListing()                              |
+| + deleteListing()                            |
+| + getPropertyDetails()                       |
+------------------------------------------------
+
+------------------------------------------------
+|                Review                        |
+------------------------------------------------
+| - reviewId: String                           |
+| - propertyId: String (FK -> Property)        |
+| - userId: String (FK -> User)                |
+| - rating: Number (1-5)                       |
+| - comment: String                            |
+| - timestamp: Date                            |
+------------------------------------------------
+| + addReview()                                |
+| + editReview()                               |
+| + deleteReview()                             |
+------------------------------------------------
+
+------------------------------------------------
+|                Inquiry                       |
+------------------------------------------------
+| - inquiryId: String                          |
+| - propertyId: String (FK -> Property)        |
+| - userId: String (FK -> User)                |
+| - message: String                            |
+| - timestamp: Date                            |
+------------------------------------------------
+| + sendInquiry()                              |
+| + viewInquiries()                            |
+------------------------------------------------
+
+------------------------------------------------
+|                Admin                         |
+------------------------------------------------
+| - adminId: String                            |
+| - name: String                               |
+| - email: String                              |
+------------------------------------------------
+| + manageUsers()                              |
+| + manageListings()                           |
+| + handleReports()                            |
+------------------------------------------------
+
+
+
+
+
+
+
+
+-------------------------------------
+|            User                   |
+-------------------------------------
+| ID                                 |
+| Name                               |
+| Email                              |
+| Password                           |
+| Role (Guest, Registered, Owner)    |
+-------------------------------------
+| register()                         |
+| login()                            |
+-------------------------------------
+
+-------------------------------------
+|         PropertyListing            |
+-------------------------------------
+| ID                                 |
+| Owner_ID                           |
+| Title                              |
+| Description                        |
+| Address                            |
+| Rent_Price                         |
+| Images[]                           |
+-------------------------------------
+| addListing()                       |
+| editListing()                      |
+| deleteListing()                     |
+-------------------------------------
+
+-------------------------------------
+|          Review                    |
+-------------------------------------
+| ID                                 |
+| User_ID                            |
+| Listing_ID                         |
+| Rating (1-5)                       |
+| Comment                            |
+-------------------------------------
+| addReview()                        |
+| deleteReview()                     |
+-------------------------------------
+
+-------------------------------------
+|         Admin                      |
+-------------------------------------
+| ID                                 |
+| Name                               |
+| Email                              |
+-------------------------------------
+| manageUsers()                      |
+| manageListings()                   |
+-------------------------------------

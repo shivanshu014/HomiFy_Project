@@ -1,0 +1,62 @@
+    Guest User      Homify System       Database       Property Owner     Admin
+        |               |                |                |               |
+        |-----> View Listings ---------->|                |               |
+        |               |-----> Fetch Listings --------->|               |
+        |               |<----- Listings Data ----------|               |
+        |<----- Display Listings ---------|                |               |
+        |               |                |                |               |
+        |-----> Register (POST) --------->|                |               |
+        |               |-----> Store User Details ----->|               |
+        |               |<----- Success Response -------|               |
+        |<----- Registration Successful --|                |               |
+        |               |                |                |               |
+        |-----> Login (POST) ------------>|                |               |
+        |               |-----> Verify Credentials ----->|               |
+        |               |<----- Auth Success/Fail ------|               |
+        |<----- Login Response ----------|                |               |
+        |               |                |                |               |
+        |-----> Search Listings -------->|                |               |
+        |               |-----> Fetch Listings --------->|               |
+        |               |<----- Listings Data ----------|               |
+        |<----- Display Listings ---------|                |               |
+        |               |                |                |               |
+        |-----> Add Review (POST) ------->|                |               |
+        |               |-----> Store Review ----------->|               |
+        |               |<----- Success Response -------|               |
+        |<----- Review Added Successfully |                |               |
+        |               |                |                |               |
+        |               |                |                |               |
+    --- Property Owner Actions ---
+        |               |                |                |               |
+        |-----> Add Listing (POST) ------>|                |               |
+        |               |-----> Store Listing ---------->|               |
+        |               |<----- Success Response -------|               |
+        |<----- Listing Added Successfully |                |               |
+        |               |                |                |               |
+        |-----> Edit Listing (PUT) ------>|                |               |
+        |               |-----> Update Listing -------->|               |
+        |               |<----- Success Response -------|               |
+        |<----- Listing Updated ----------|                |               |
+        |               |                |                |               |
+        |-----> Delete Listing (DELETE) ->|                |               |
+        |               |-----> Remove Listing -------->|               |
+        |               |<----- Success Response -------|               |
+        |<----- Listing Deleted ----------|                |               |
+        |               |                |                |               |
+        |-----> Delete Review (DELETE) -->|                |               |
+        |               |-----> Remove Review --------->|               |
+        |               |<----- Success Response -------|               |
+        |<----- Review Deleted Successfully |                |               |
+        |               |                |                |               |
+    --- Admin Actions ---
+        |               |                |                |               |
+        |-----> Manage Users (CRUD) ----->|                |               |
+        |               |-----> Perform Actions (CRUD) ->|               |
+        |               |<----- Success Response -------|               |
+        |<----- Users Managed Successfully |                |               |
+        |               |                |                |               |
+        |-----> Manage Listings (CRUD) -->|                |               |
+        |               |-----> Perform Actions (CRUD) ->|               |
+        |               |<----- Success Response -------|               |
+        |<----- Listings Managed Successfully |                |               |
+        |               |                |                |               |
