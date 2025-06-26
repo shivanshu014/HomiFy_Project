@@ -41,7 +41,7 @@ app.use(methodOverride("_method"))
 app.use(express.static(path.join(__dirname, '/public')))
 app.engine('ejs', ejsMate);
 
-//Mongo store session info on mogoatlus
+//Mongo store session info on mongo atlus
 const store = MongoStore.create({
     mongoUrl: dbUrl,
     crypto: {

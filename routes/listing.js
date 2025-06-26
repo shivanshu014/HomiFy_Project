@@ -43,6 +43,7 @@ router.
 router.get('/new', isLoggedIn, wrapAsync(listingController.renderNewForm));
 
 router.route("/:id")
+
     .get(wrapAsync(listingController.showListing)) //Show route
     .put(
         isLoggedIn,
